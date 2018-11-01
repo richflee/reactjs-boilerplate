@@ -1,23 +1,32 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-module.exports = {
+const config = {
+    entry: "./src/index.tsx",
+    mode: 'development',
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "ts-loader",
                 }
             },
             {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: "html-loader"
+                        loader: "html-loader",
+                        options: {
+                            transpileOnly: true,
+                            experimentalWatchApi: true,
+                        },
                     }
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ]
     },
     plugins: [
         new HtmlWebPackPlugin({
@@ -26,3 +35,5 @@ module.exports = {
         })
     ]
 };
+
+module.exports = config;
