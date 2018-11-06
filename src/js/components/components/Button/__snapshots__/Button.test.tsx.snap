@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button changes the class when hovered 1`] = `
+<button
+  className="normal"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  Foo
+</button>
+`;
+
+exports[`Button changes the class when hovered 2`] = `
+<button
+  className="hovered"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  Foo
+</button>
+`;
+
+exports[`Button changes the class when hovered 3`] = `
+<button
+  className="normal"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  type="button"
+>
+  Foo
+</button>
+`;
