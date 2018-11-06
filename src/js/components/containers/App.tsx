@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
+require('./App.css')
 
 
 interface AppComponentState {

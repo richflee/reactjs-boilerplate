@@ -1,5 +1,6 @@
 // Button.tsx
 import * as React from 'react';
+import styled from 'styled-components';
 
 
 const STATUS = {
@@ -12,7 +13,25 @@ interface ButtonComponentState {
 }
 
 interface ButtonComponentProps {
+    onclick?: () => any
 }
+
+
+const StyledButton = styled.button`
+    background-color: lightpink;
+    border: 1px solid darkblue;
+    border-radius: 0.25em;
+    color: darkblue;
+    font-size: 1em;
+    padding: 0.5em;
+    &:active {
+        background-color: darkblue;
+        border: 1px solid lightpink;
+        color: lightpink;
+    }
+`;
+
+
 
 export default class Button extends React.Component<ButtonComponentProps, ButtonComponentState> {
     constructor(props: ButtonComponentProps) {
@@ -36,12 +55,13 @@ export default class Button extends React.Component<ButtonComponentProps, Button
 
     render() {
         return (
-            <button type="button"
+            <StyledButton type="button"
                 className={this.state.class}
+                onClick={this.props.onclick}
                 onMouseEnter={this._onMouseEnter}
                 onMouseLeave={this._onMouseLeave}>
                 {this.props.children}
-            </button>
+            </StyledButton>
         );
     }
 }
