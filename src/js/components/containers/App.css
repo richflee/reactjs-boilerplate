@@ -1,9 +1,23 @@
 body {
-    background: lightcyan;
+    background: #e5dfdf;
+    color: #1d4d4f;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 2.2em;
 }
 
 p {
     font-size: 1.25em;
+}
+
+ul li {
+    padding: 0.15em 0;
+}
+
+ul li a {
+    color: #1d4d4f;
 }

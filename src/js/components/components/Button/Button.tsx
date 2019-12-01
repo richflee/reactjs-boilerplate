@@ -18,16 +18,14 @@ interface ButtonComponentProps {
 
 
 const StyledButton = styled.button`
-    background-color: lightpink;
-    border: 1px solid darkblue;
-    border-radius: 0.25em;
-    color: darkblue;
+    background-color: #6ba8a9;
+    border: none;
+    border-radius: 0.33em;
+    color: #fff;
     font-size: 1em;
-    padding: 0.5em;
+    padding: 0.8em;
     &:active {
-        background-color: darkblue;
-        border: 1px solid lightpink;
-        color: lightpink;
+        background-color: #357376;
     }
 `;
 
