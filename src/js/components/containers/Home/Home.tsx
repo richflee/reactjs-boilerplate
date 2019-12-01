@@ -25,17 +25,28 @@ export default class Home extends React.Component<any, HomeComponentState> {
     }
 
     _renderExplanatoryText() {
+        let explanatoryText; 
         if (this.state.revealExplanatoryInfo) {
-            return <p>Welcome to my cool React boilerplate. As you can see I'm trying to jam as many useful tools into it, such as: Styled Components, Jest, Typescript and more.</p>;
+            explanatoryText = `Welcome to my cool React boilerplate. As you can see I'm trying to jam as many useful tools into it, such as: Styled Components, Jest, Typescript and more.`;
+        } else {
+            explanatoryText = ``;
         }
-        return;
-    } 
+        return <p>{explanatoryText}</p>;
+    }
+
+    _toggleMessageButtonText() {
+        if (this.state.revealExplanatoryInfo) {
+            return `Hide welcome message`;
+        } else {
+            return `Show welcome message`;
+        }
+    }
 
     render() {
         return (
             <div>
                 <h2>Home</h2>
-                <Button onclick={this._onToggleTextDisplay}>Styled button 1</Button>
+                <Button onclick={this._onToggleTextDisplay}>{this._toggleMessageButtonText()}</Button>
                 {this._renderExplanatoryText()}
             </div>
         );
